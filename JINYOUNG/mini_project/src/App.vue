@@ -2,6 +2,9 @@
   <v-app>
     <Header />
     <v-main>
+      <aside>
+        <Sidebar />
+      </aside>
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -9,12 +12,14 @@
 
 <script>
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
 export default {
   name: "App",
 
   components: {
-    Header
+    Header,
+    Sidebar
   },
 
   data: () => ({
@@ -22,3 +27,12 @@ export default {
   })
 };
 </script>
+<style scoped>
+aside {
+  position: fixed;
+  width: 10%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: left;
+}
+</style>
